@@ -8,3 +8,8 @@ app = Flask(__name__)
 @app.route('/')
 def hello_world():
     return 'Hello, World!'
+
+@app.route('/die')
+def die():
+    exit(2)
+
