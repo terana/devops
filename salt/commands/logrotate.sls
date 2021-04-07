@@ -20,8 +20,13 @@ logrotate_setup:
   file.directory:
     - mode: 755
     - makedirs: True
+    - user: flask
+    - group: flask
 
 
 /var/log/sample-server/flask.log:
   file.managed:
     - mode: 655
+    - user: flask
+    - group: flask
+    

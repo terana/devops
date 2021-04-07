@@ -9,6 +9,8 @@
         ExecStart=/usr/bin/python -m flask run --host=0.0.0.0
         ExecReload=/bin/kill -9 $MAINPID
         Restart=always
+        User=flask
+        Group=flask
 
 sample-server:
   service.running:
