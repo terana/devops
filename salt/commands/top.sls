@@ -4,3 +4,4 @@ base:
   'minion':
     - python
     - systemd
+    - logrotate
