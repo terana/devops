@@ -43,6 +43,7 @@ Vagrant.configure("2") do |config|
 		minion.vm.synced_folder "salt/commands", "/srv/salt"
 		minion.vm.synced_folder "app", "/srv/app"
 		minion.vm.network "private_network", ip: "192.168.50.20"
+		minion.vm.network "forwarded_port", guest: 5000, host: 8080
 
 		minion.vm.provision :salt do |saltminion|
 			saltminion.minion_config = "salt/configs/minion"
@@ -55,5 +56,4 @@ Vagrant.configure("2") do |config|
 			saltminion.run_highstate = true
 		end
 	end
-
 end
