@@ -14,3 +14,13 @@ To get everything up and running:
 ```bash
 vagrant up
 ```
+
+If you want to check what's inside the VM:
+```bash
+./ssh_to_machine.sh minion
+```
+
+Don't forget to clean up after playing:
+```bash
+vagrant destroy
+```
